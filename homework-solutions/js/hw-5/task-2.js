@@ -21,16 +21,27 @@ const divByThreeInfo = ' - делится на 3';
 const divByFiveInfo = ' - делится на 5';
 const divByThreeAndFiveInfo = ' - делится и на 3 и на 5';
 const newLine = '\n';
+const intervalEnd = 100;
 
-for (let i = 1; i <= 100; i++) {
-  if (i % 3 === 0 && i % 5 === 0) {
-    fizzBuzzResult += i + divByThreeAndFiveInfo + newLine;
-  } else if (i % 5 === 0) {
-    fizzBuzzResult += i + divByFiveInfo + newLine;
-  } else if (i % 3 === 0) {
-    fizzBuzzResult += i + divByThreeInfo + newLine;
-  } else fizzBuzzResult += i + newLine;
+for (let i = 1; i <= intervalEnd; i++) {
+  if (i === intervalEnd) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      fizzBuzzResult += i + divByThreeAndFiveInfo;
+    } else if (i % 5 === 0) {
+      fizzBuzzResult += i + divByFiveInfo;
+    } else if (i % 3 === 0) {
+      fizzBuzzResult += i + divByFiveInfo;
+    }
+  } else {
+    if (i % 3 === 0 && i % 5 === 0) {
+      fizzBuzzResult += i + divByThreeAndFiveInfo + newLine;
+    } else if (i % 5 === 0) {
+      fizzBuzzResult += i + divByFiveInfo + newLine;
+    } else if (i % 3 === 0) {
+      fizzBuzzResult += i + divByThreeInfo + newLine;
+    } else fizzBuzzResult += i + newLine;
+  }
 }
 console.log(fizzBuzzResult);
 
-//export { fizzBuzzResult };
+export { fizzBuzzResult };
