@@ -29,10 +29,16 @@ console.log(evenNumbersResult);
 
 let smilePatternResult = '';
 const smile = ':)';
+const newLine = '\n';
 
 for (let i = 1; i <= 5; i++) {
-console.log(smilePatternResult+smile);
+    if (i === 5) {
+        smilePatternResult += smile.repeat(i)
+    } else{
+smilePatternResult += smile.repeat(i) + newLine;
+    }
 }
+console.log(smilePatternResult);
 
 /**
  * Заменить все пробелы в переменной text на "1".
@@ -47,4 +53,4 @@ let replaceSpacesWithOneResult = '';
 replaceSpacesWithOneResult=text.replaceAll(" ","1");
 console.log(replaceSpacesWithOneResult); // 'Hello!1I1am1a
 
-//export { evenNumbersResult, smilePatternResult, replaceSpacesWithOneResult };
+export { evenNumbersResult, smilePatternResult, replaceSpacesWithOneResult };
