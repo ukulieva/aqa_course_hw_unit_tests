@@ -21,9 +21,8 @@ let age = 'k';
 
 const incorrectTypeMessage = 'Incorrect data type';
 const defaultMessage = 'Technical work';
-const number = 'number';
 
-if (typeof age !== number) {
+if (typeof age !== 'number') {
   console.log(incorrectTypeMessage);
 } else {
   if (age < minAge) {
