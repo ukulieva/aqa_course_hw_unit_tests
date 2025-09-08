@@ -5,7 +5,7 @@ class Employee {
     this._firstName = firstName;
     this._lastName = lastName;
     this._profession = profession;
-    this.#salary = salary;
+    this.salary = salary;
   }
 
   get firstName() {
