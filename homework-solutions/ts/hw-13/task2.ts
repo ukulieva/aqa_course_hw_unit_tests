@@ -9,7 +9,7 @@
 Функция должна возвращать false, если хотя бы одно из условий не выполнено.
 */
 
-function validatePassword(password: string): boolean | undefined {
+function validatePassword(password: string): boolean {
   const passArray = [...password];
   const hasLength: boolean = passArray.length >= 8;
   const hasNumber: boolean = passArray.some((element) => (element ? element >= '0' && element <= '9' : false));
