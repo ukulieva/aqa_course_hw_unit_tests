@@ -9,10 +9,10 @@
    map([1,2,3,4,5], callback) => [0,2,6,12,20]
    */
 
-type mapArraysCallback<T> = (element: T, index: number) => T;
+type mapArraysCallback<T, U> = (element: T, index: number) => U;
 
-function mapArrays<T>(array: T[], callback: mapArraysCallback<T>): T[] {
-  const newArray: T[] = [];
+function mapArrays<T,U>(array: T[], callback: mapArraysCallback<T,U>): U[] {
+  const newArray: U[] = [];
   array.forEach((element, index) => newArray.push(callback(element, index)));
   return newArray;
 }
