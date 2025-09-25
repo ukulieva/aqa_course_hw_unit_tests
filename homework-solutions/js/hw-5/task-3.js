@@ -12,9 +12,9 @@ let vowelsCount = 0;
 let consonantsCount = 0;
 
 for (let letter of wordArr) {
-  if (vowels.includes(letter)) {
+  if (vowels.includes(letter.toLowerCase())) {
     vowelsCount++;
-  } else if (consonants.includes(letter)) {
+  } else if (consonants.includes(letter.toLowerCase())) {
     consonantsCount++;
   }
 }
